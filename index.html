@@ -36,11 +36,10 @@
     }
 
     iframe {
-      width: 100vw;
+      width: 70vw;
       height: 90vh;
       border: none;
       border-radius: 12px;
-      box-shadow: 0 0 20px #000;
       background: transparent;
     }
 
@@ -54,6 +53,27 @@
       opacity: 1;
       pointer-events: auto;
     }
+
+     .overlay-container {
+    position: fixed;
+    top: 50px;
+    left: 1%;
+    width:  329px;
+    height: 500px;
+    z-index: 9999;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    
+  }
+
+  .overlay-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: block;
+  }
 
     /* 🌀 ROTATE WARNING OVERLAY */
     #rotateWarning {
@@ -129,9 +149,9 @@
     </div>
 
   <!-- 📘 OVERLAYS -->
-  <div class="musicbox" id="musicOverlay">
-    <iframe src="music.html" allowtransparency="true"></iframe>
-  </div>
+   <div class="overlay-container" id="musicOverlay">
+        <iframe src="music.html" allowtransparency="true"></iframe>
+    </div>
 
   <div class="namebox" id="bukuOverlay">
     <iframe src="buku.html" allowtransparency="true"></iframe>
